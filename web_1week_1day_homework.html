@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>1day_homework</title>
+    <style type="text/css">
+      #menu ul {
+        list-style: none;
+        margin: 5px;
+        padding: 5px;
+      }
+      #menu li{
+        display: inline;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <div class="logo">
+          <a href="https://www.naver.com/"><img src="http://logoproject.naver.com/img/img_about.gif"></a>
+        </div>
+          <nav id="menu">
+            <ul>
+              <li><a href="#">메뉴1</a></li> <!-- <ul>:순서가 중요하지않은 목록, <li>:각 목록 항목, <a>태크로 메뉴의 링크 만듦 -->
+              <li><a href="#">메뉴2</a></li>
+              <li><a href="#">메뉴3</a></li>
+              <li><a href="#">메뉴4</a></li>
+              <li><a href="#">메뉴5</a></li>
+            </ul>
+          </nav>
+      </div>
+    </header>
+    <section>
+
+        <div>
+          <div style="height: 500px; width: 30%; float:left;">
+              <div>
+                <h1>로그인</h1>
+                <form action="javascript:alert('로그인성공');" method="POST">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>ID</td>
+                      <td><input type="text" name="username" value="" placeholder="USERNAME"></td>
+                      <!-- value에서는 지정값 미리 들어가게 할 수 있음 -->
+                    </tr>
+                    <tr>
+                      <td>PW</td>
+                      <td><input type="password" name="password" value="" placeholder="PASSWORD"></td>
+                    </tr>
+                    <tr>
+                      <td colspan="2"> <!-- colspan : 셀 병합, column 공간이 2개 -->
+                        <input type="submit" value="로그인" style="width:100%">
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                </form>
+                <span>
+                  <a href="#">ID/PW 찾기</a>
+                  <a href="#">회원가입</a>
+                </span>
+              </div>
+              <!-- 로그인 영역 -->
+
+              <div>
+                <h1>게시판 목록</h1>
+                <nav>
+                  <ul>
+                    <li><a href="#">공지사항</a></li> <!-- <ul>:순서가 중요하지않은 목록, <li>:각 목록 항목, <a>태크로 메뉴의 링크 만듦 -->
+                    <li><a href="#">채진희 안티카페</a></li>
+                    <li><a href="#">임수진 안티카페</a></li>
+                    <li><a href="#">윤정준 안티카페</a></li>
+                    <li><a href="#">장태진 팬카페</a></li>
+                    <li><a href="#">우지섭 알림</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+              <div style="height: 500px; width: 70%; float:left;">
+                <div>
+                  <table>
+                    <h1>게시물작성</h1>
+                    <br>
+                      카테고리
+                      <select>
+                        <option value="0">공지사항</option>
+                        <option value="1">게시판1</option>
+                        <option value="2">게시판2</option>
+                        <option value="3">게시판3</option>
+                      </select>
+
+                    <br>
+                      제목
+                      <input type="text" name="title">
+                    <br>
+                    <form action="javascript:alert('작성완료');" method="POST">
+                      <tbody>
+                        <textarea name="text_board" rows="8" cols="80"></textarea>
+                        <div>
+                          <tr>
+                            <input type="submit" value="작성하기">
+                            <input type="reset" value="초기화하기">
+                          </tr>
+                        </div>
+                      </tbody>
+                    </form>
+                  </table>
+                </div>
+
+                <div>
+                  <h1>공지사항</h1>
+                  <table>
+                    <thead>
+                      <th>번호</th>
+                      <th>제목</th>
+                      <th>날짜</th>
+                      <th>조회수</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th>1</th>
+                        <td>aaaa</td>
+                        <td>2017.01.02</td>
+                        <td>3</td>
+                      </tr>
+                      <tr>
+                        <th>1</th>
+                        <td>aaaa</td>
+                        <td>2017.01.02</td>
+                        <td>3</td>
+                      </tr>
+                      <tr>
+                        <th>1</th>
+                        <td>aaaa</td>
+                        <td>2017.01.02</td>
+                        <td>3</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+              </div>
+          </div>
+    </section>
+    <footer>
+      Copyright (c) 2017 Copyright Holder All Rights Reserved.
+    </footer>
+  </body>
+</html>
