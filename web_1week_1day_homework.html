@@ -3,17 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>1day_homework</title>
-    <style type="text/css">
-      #menu ul {
-        list-style: none;
-        margin: 5px;
-        padding: 5px;
-      }
-      #menu li{
-        display: inline;
-        padding: 5px;
-      }
-    </style>
   </head>
   <body>
     <header>
@@ -21,24 +10,18 @@
         <div class="logo">
           <a href="https://www.naver.com/"><img src="http://logoproject.naver.com/img/img_about.gif"></a>
         </div>
-          <nav id="menu">
-            <ul>
-              <li><a href="#">메뉴1</a></li> <!-- <ul>:순서가 중요하지않은 목록, <li>:각 목록 항목, <a>태크로 메뉴의 링크 만듦 -->
-              <li><a href="#">메뉴2</a></li>
-              <li><a href="#">메뉴3</a></li>
-              <li><a href="#">메뉴4</a></li>
-              <li><a href="#">메뉴5</a></li>
-            </ul>
-          </nav>
-      </div>
+            <span>메뉴1</span>
+            <span>메뉴2</span>
+            <span>메뉴3</span>
+            <span>메뉴4</span>
+            <span>메뉴5</span>
+        </div>
     </header>
     <section>
-
       <table>
         <tbody>
-          <tr>
-            <td>
-          <div style="height: 500px; width: 300px;">
+          <tr height="500">
+           <td valign="top" width="300">
               <div>
                 <h1>로그인</h1>
                 <form action="javascript:alert('로그인성공');" method="POST">
@@ -81,10 +64,10 @@
                   </ul>
                 </nav>
               </div>
-            </div>
-          </td>
-          <td>
-              <div style="height: 500px; width: 800px;">
+           </td>
+           <!-- 게시판 목록 영역 -->
+
+          <td valign="top" width="800">
                 <div>
                   <table>
                     <h1>게시물작성</h1>
@@ -96,7 +79,6 @@
                         <option value="2">게시판2</option>
                         <option value="3">게시판3</option>
                       </select>
-
                     <br>
                       제목
                     <form action="javascript:alert('작성완료');" method="POST">
@@ -114,6 +96,7 @@
                     </form>
                   </table>
                 </div>
+                <!-- 게시물 작성 영역-->
 
                 <div>
                   <h1>공지사항</h1>
@@ -146,12 +129,11 @@
                     </tbody>
                   </table>
                 </div>
-
-              </div>
-            </td>
+                <!-- 공지사항 영역-->
+             </td>
             </tr>
-            </tbody>
-          </table>
+          </tbody>
+        </table>
     </section>
     <footer>
       Copyright (c) 2017 Copyright Holder All Rights Reserved.
