@@ -1,0 +1,17 @@
+[==과 === 차이점]
+
+==는 Equal Operator라고 하고, ===는 Strict Equal Operator라고 한다.
+
+==는 동등연산자, 피연산자가 서로 다른 타입이면 타입을 강제로 형변환하여 비교한다.
+
+===는 형변환없이 정확한 비교가 가능하다. 
+
+비교는 기본타입(Primitive Value)에 해당하는 값들을 비교할 때만 의미가 있다.
+
+자바스크립트에서의 기본 타입은 string, number, boolean, null, undefined 만 비교하는 의미가 있다. 
+
+null과 undefined는 값이 없다는 의미의 데이터 형이다. null은 값이 없음을 명시적으로 표시한 것이고, 
+
+undefined는 그냥 값이 없는 상태이기때문에, ==로는 true가 뜨지만, ===로는 false가 리턴된다.
+
+즉, ==보다는 ===를 사용해야 한다.

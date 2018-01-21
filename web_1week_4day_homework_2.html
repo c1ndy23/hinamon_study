@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>4day_homework_1_js.do</title>
+  </head>
+  <style>
+  .wrap {
+    position: relative;
+    background: #e7e8eb;
+    overflow: hidden;
+  }
+  .header {
+    position: relative;
+    width: 500px;
+    height: 110px;
+    padding-left: 10px;
+  }
+  .container {
+    width: 1500px;
+    margin: 0 auto;
+    overflow: hidden;
+    zoom: 1;
+  }
+  .input_page {
+    position: relative;
+    width: 750px;
+    float: left;
+  }
+  #input {
+    position: relative;
+    margin: 0px;
+    height: 607px;
+    width: 700px;
+  }
+  .output_page {
+    position: relative;
+    width: 750px;
+    float: right;
+  }
+  #output {
+    position: relative;
+    margin:0px;
+    height: 607px;
+    width: 700px
+  }
+  </style>
+  <body>
+    <div class="wrap">
+      <div class="header">
+        <h1>js.do</h1>
+        <button onclick="run_code()" type="button" name="button" style="width:110px; height:40px;">▶ RUN CODE</button>
+      </div>
+      <div class="container">
+        <div class="input_page">
+          <h1>INPUT</h1>
+          <textarea id="input"></textarea>
+        </div>
+        <div class="output_page">
+          <h1>OUTPUT</h1>
+          <textarea id="output"></textarea>
+        </div>
+        <script type="text/javascript">
+          function run_code() {
+            var input = document.getElementById("input").value;
+            var output = document.getElementById("output").value;
+            var result = eval(input);
+          //  document.getElementById("output").value = result;
+            output.innerHTML = result;
+          }
+        </script>
+      </div>
+    </div>
+  </body>
+</html>

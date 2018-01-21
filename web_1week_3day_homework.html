@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>NEW_3day_NAVER</title>
+  </head>
+  <style>
+    .wrap {
+      position: relative;
+      overflow: hidden;
+      min-width: 1100px;
+      background: #e7e8eb;
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      z-index: 100;
+      border-bottom: 1px solid #d1d8e4;
+    }
+    .special_header {
+      height: 170px;
+      background: #fff;
+      margin: 0;
+    }
+    .area_flex {
+      position: relative;
+      margin: 0 auto;
+      width: 1080px;
+      height: 100%;
+    }
+    .area_links {
+      position: absolute;
+      top: 12px;
+      right: -3px;
+      font-size: 11px;
+      zoom: 1;
+    }
+    .area_links > a:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    .area_links > .al_bar {
+      position: relative;
+      right: -3px;
+      color: #ebeef3;
+    }
+    .area_logo{
+      position: absolute;
+      overflow: hidden;
+      background-position: 0 0;
+      width: 202px;
+      height: 57px;
+      margin: 50px 5px;
+      zoom: 1;
+    }
+    .area_search {
+      position: absolute;
+      top: 57px;
+      left: 230px;
+      width: 474px;
+      height: 41px;
+      border: 2px solid #00c73c;
+    }
+    .search_click {
+      position: absolute;
+      top: 57px;
+      left: 705px;
+      width: 45px;
+      height: 45px;
+      border: 0;
+      background: #00c73c;
+    }
+    .special_nav {
+      position: relative;
+      z-index: 100;
+      height: 46px;
+      border-top: 1px solid #f1f3f6;
+      background: #fff;
+    }
+    .area_nav {
+      position: relative;
+      margin: 0 auto;
+      width: 1080px;
+      zoom: 1;
+    }
+    .list_nav .link_mail {
+      width: 30px;
+      background-position: 0 -30px;
+    }
+    .list_nav .txt_pctop {
+      display: block;
+      height: 25px;
+      padding: 10px 0;
+      font-weight: bold;
+      font-size: 13px;
+      line-height: 25px;
+      background-color: transparent;
+    }
+    .txt_pctop {
+      overflow: hidden;
+      background-image: url('//t1.daumcdn.net/daumtop_deco/images/top/2017/txt_pctop_170915.png') no-repeat 0 0;
+    }
+    .ir_wa {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    }
+    .container {
+      width: 1080px;
+      margin: 0 auto;
+      padding: 5px 10px 0;
+      text-align: left;
+      overflow: hidden;
+      zoom: 1;
+    }
+    .left_container {
+      position: relative;
+      float: left;
+      width: 740px;
+    }
+    .advertisement_1 {
+      position: relative;
+      height: 118px;
+      top: 3px;
+      border: 1px solid #dee3eb;
+      background:#fff;
+    }
+    .news_cast {
+      position: relative;
+      padding-top: 8px;
+      height: 308px;
+    }
+    .area_news {
+      position: relative;
+      margin-bottom: 8px;
+      height: 44px;
+      border: 1px solid #dee3eb;
+      background: #fff;
+    }
+    .cast_flash {
+      position: relative;
+      padding: 15px 0 0 16px;
+      zoom: 1;
+    }
+    .cf_tit {
+      float: left;
+      margin: 0;
+      padding: 0;
+    }
+    .cf_news {
+      display: block;
+      margin-right: 12px;
+      color: #000;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 12px;
+      font-family: NanumSquare;
+      line-height: 16px;
+    }
+    .area_newsstand {
+      position: relative;
+      height: 244px;
+      border: 1px solid #dee3eb;
+      background: #fff;
+    }
+    .right_container {
+      position: relative;
+      float: right;
+      width: 332px;
+    }
+    .login {
+      position: relative;
+      margin-top: 3px;
+      height: 118px;
+      border: 1px solid #dee3eb;
+      background: #fff;
+    }
+    .timesquare {
+      position: relative;
+      margin: 6px 0;
+      height: 140px;
+      border: 1px solid #dee3eb;
+      background: #fff;
+    }
+    .timesquare > .area_header {
+      position: relative;
+      padding-left: 15px;
+      height: 33px;
+      border-bottom: 1px solid #ebeef3;
+    }
+    .advertisement_2 {
+      position: relative;
+      height: 150px;
+      background: #fff;
+    }
+    .bottom_container {
+      clear: both;
+      overflow: hidden;
+      text-align: left;
+      zoom: 1;
+    }
+    .themecast {
+      position: relative;
+      float: left;
+      width: 738px;
+      height: 882px;
+      border: 1px solid #dee3eb;
+      background: #fff;
+    }
+    .themecast_nav {
+      position: absolute;
+      top: 0;
+      right: 90px;
+      left: 45px;
+      z-index: 10;
+      overflow: hidden;
+      height: 45px;
+    }
+    .shopcast {
+      position: relative;
+      float: right;
+      width: 330px;
+      height: 882px;
+      border: 1px solid #dee3eb;
+      background: #fff;
+    }
+    .special_footer {
+      margin-top: 8px;
+      border-top: 1px solid #e3e7ee;
+      background: #fff;
+      text-align: left;
+    }
+    .notice {
+      position: relative;
+      border-bottom: 1px solid #f1f3f6;
+    }
+    .area_notice {
+      position: relative;
+      margin: 0 auto;
+      padding-top: 16px;
+      width: 1080px;
+      height: 29px;
+      zoom: 1;
+    }
+    .aside {
+      position: relative;
+      margin: 0 auto;
+      width: 1080px;
+      height: 110px;
+      zoom: 1;
+    }
+    body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, textarea, p, blockquote, th, td, input, select, button {
+      margin: 0;
+      padding: 0;
+    }
+    ul, li {
+      list-style: none;
+    }
+    a {
+      color: #656561;
+      text-decoration: none; /* link 밑줄 없애기 */
+    }
+    body {
+      font-size: 12px;
+      font-family: Dotum, '돋움';
+    }
+  </style>
+  <body>
+    <div class="wrap">
+      <div class="header" role="banner">
+        <div class="special_header">
+          <div class="area_flex">
+            <div class="area_links">
+              <a href="http://help.naver.com/support/alias/contents2/naverhome/naverhome_1.naver" class="al_favorite">네이버를 시작페이지로 ></a><span class="al_bar">|</span>
+              <a href="http://jr.naver.com" class="al_jr">쥬니어네이버</a>
+              <a href="http://happybean.naver.com/main/SectionMain.nhn" class="al_happybean">해피빈</a>
+            </div>
+            <div class="area_logo">
+              <img src="https://s.pstatic.net/static/www/img/2017/sp_main_v171220.png">
+            </div>
+            <span class="area_search"></span>
+            <span class="search_click"></span>
+          </div>
+        </div>
+        <div class="special_nav">
+          <div class="area_nav">
+            <ul class="list_nav">
+              <li>
+                <a href="#" class="txt_pctop link_mail"><span class="ir_wa">메일</span></a>
+              </li>
+              <li>
+                <a href="#" class="txt_pctop link_cafe"><span class="ir_wa">카페</span></a>
+              </li>
+              <li>
+                <a href="#" class="txt_pctop link_blog"><span class="ir_wa">블로그</span></a>
+              </li>
+              <li>
+                <a href="#" class="txt_pctop link_kin"><span class="ir_wa">지식iN</span></a>
+              </li>
+              <li>
+                <a href="#" class="txt_pctop link_shop"><span class="ir_wa">쇼핑</span></a>
+              </li>
+              <li>
+                <a href="#" class="txt_pctop link_pay"><span class="ir_wa">Pay</span></a>
+              </li>
+              <li>
+                <a href="#" class="txt_pctop link_tv"><span class="ir_wa">TV</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container" role="main">
+        <div class="left_container">
+          <div class="advertisement_1">
+            <img class="advertisement_1_img" src="https://ssl.pstatic.net/tveta/libs/1184/1184195/f7f9ada0eb5bd3d31142_20180117170255002.jpg">
+          </div>
+          <div class="news_cast">
+            <div class="area_news">
+              <div class="cast_flash">
+                <h3 class="cf_tit"><a href="#" class="cf_news">연합뉴스</a></h3>
+              </div>
+            </div>
+            <div class="area_newsstand">
+
+            </div>
+          </div>
+        </div>
+        <div class="right_container">
+          <div class="login">
+
+          </div>
+          <div class="timesquare">
+            <div class="area_header">
+
+            </div>
+            <div class="area_contain">
+
+            </div>
+          </div>
+          <div class="advertisement_2">
+
+          </div>
+        </div>
+        <div class="bottom_container">
+          <div class="themecast">
+            <div class="themecast_nav">
+
+            </div>
+          </div>
+          <div class="shopcast">
+
+          </div>
+        </div>
+      </div>
+      <div class="special_footer" role="info">
+        <div class="notice">
+          <div class="area_notice">
+
+          </div>
+          <div class="area_service">
+
+          </div>
+        </div>
+        <div class="aside">
+
+        </div>
+        <div class="footer">
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
