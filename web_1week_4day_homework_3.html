@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>4day_homework_3_회원가입</title>
+  </head>
+  <style>
+    .wrap {
+      position: relative;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+    }
+    .area_join {
+      position: relative;
+      height: 550px;
+      width: 650px;
+      margin: 100px auto;
+      padding: 5px;
+      overflow: hidden;
+      zoom: 1;
+    }
+    .area_line {
+      position: relative;
+      padding: 20px;
+      background-color: #c9c3c8;
+      overflow: hidden;
+    }
+    div.button {
+      margin: 10px auto 0 auto;
+      width: 15%;
+    }
+    div.button > button {
+      width: 100%;
+    }
+    h2 {
+      display: inline-block;
+      position: relative;
+      margin: 6px;
+      padding: 8px;
+    }
+    .area_line > input {
+      position: relative;
+      margin: 9px;
+      padding: 8px;
+      float: right;
+    }
+  </style>
+  <body>
+    <div class="wrap">
+      <div class="area_join">
+        <h1 style="text-align:center;">JOIN</h1>
+        <div class="area_line">
+          <h2>USERNAME</h2>
+          <input id="username" type="text" name="name" style="width:60%; height:19px; clear:both;">
+          <br>
+          <h2>PASSWORD</h2>
+          <input id="password" type="password" name="password" style="width:60%; height:19px; clear:both;">
+          <br>
+          <h2>EMAIL</h2>
+          <input id="email" type="text" name="email" style="width:60%; height:19px; clear:both;">
+          <br>
+          <div class="button">
+            <button onclick="join_submit()" type="submit" name="button">가입하기</button>
+          </div>
+          <script type="text/javascript">
+            function join_submit() {
+              var username = document.getElementById("username").value;
+              var password = document.getElementById("password").value;
+              var email = document.getElementById("email").value;
+
+              alert("Join Success!");
+            }
+          </script>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
