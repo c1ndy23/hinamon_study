@@ -46,15 +46,6 @@
     .footer > div > input {
       margin: 5px;
     }
-    .area_footer > [name=exit] {
-      color: black;
-      background-color:#D5D5D5;
-      border-radius: 5px;
-      border-style: none;
-      width:60px;
-      height:35px;
-      float:left;
-    }
     .area_footer > [name=submit] {
       color: white;
       background-color:#0F79FF;
@@ -63,6 +54,15 @@
       width:60px;
       height:35px;
       float:right;
+    }
+    .area_footer > [name=exit] {
+      color: black;
+      background-color:#D5D5D5;
+      border-radius: 5px;
+      border-style: none;
+      width:60px;
+      height:35px;
+      float:left;
     }
 
   </style>
@@ -103,25 +103,27 @@
     </div>
     <div class="footer">
       <div class="area_footer">
-        <input type="submit" name="exit" value="취소">
-        <input type="submit" name="submit" value="제출" onclick="return check();">
+        <input name="submit" value="제출" onclick="return check();"></input>
+        <button type="button" name="exit" value="취소" onclick="cancle();"></button>
       </div>
     </div>
     </form>
     <script type="text/javascript">
+    function cancle() {
+      location.href="login.php";
+      // location.href='login.php';
+    }
     function validateEmail(email) {
       var re = /\S+@\S+\.\S+/;
       return re.test(email);
     }
-
     function check(){
       var email = document.getElementsByName("email")[0].value;
 
       if(!validateEmail(email)) {
-        alert("이메일이 형식에 맞지 않습니다.");
+        alert("이메일 형식에 맞지 않습니다.");
         return false;
       }
-
       return true;
     }
     </script>
